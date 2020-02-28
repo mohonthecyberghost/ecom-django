@@ -1,0 +1,171 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from coderthemes.com/ubold/layouts/dark-horizontal/pages-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Jan 2020 17:32:03 GMT -->
+<head>
+        <meta charset="utf-8" />
+        <title>UBold - Responsive Admin Dashboard Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+
+        <!-- App css -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/icons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/app.min.css' %}" rel="stylesheet" type="text/css" />
+
+
+        <script src="{% static 'js/jquery.js' %}"></script>
+
+    </head>
+
+    <body class="authentication-bg authentication-bg-pattern">
+
+        <div class="account-pages mt-5 mb-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6 col-xl-5">
+                        <div class="card bg-pattern">
+
+                            <div class="card-body p-4">
+
+                                <div class="text-center w-75 m-auto">
+                                    <a href="index.html">
+                                        <span><img src="{% static 'images/logo-light.png' %}" alt="" height="22"></span>
+                                    </a>
+                                    <p class="text-muted mb-4 mt-3">Don't have an account? Create your account, it takes less than a minute</p>
+                                </div>
+
+                                <form action="" method="post" name="form" id="frm" enctype="multipart/form-data">
+                                                 {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="fullname">Company name</label>
+                                        <input class="form-control" name="companyName" type="text" id="companyName" placeholder="Enter your name" >
+                                    </div>
+                                       <div class="form-group">
+                                        <label for="fullname">Assigned Person name</label>
+                                        <input class="form-control" type="text" id="PersonName" name="PersonName" placeholder="Enter your name" >
+                                    </div>
+                                    <div id="state" style="display: none"><img src="{% static 'images/loader.gif'  %}"> </div>
+
+                                       <div class="form-group">
+                                        <label for="fullname">Contract Number</label>
+                                        <input class="form-control" type="text" id="contractNumber" name="contractNumber" placeholder="Enter your name" >
+                                      </div>
+                                       <div class="form-group">
+                                        <label for="fullname">Photo</label>
+                                        <input class="form-control" type="file" id="image" name="image" placeholder="Enter your name" >
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="fullname">Bank Account Number</label>
+                                        <input class="form-control" type="text" id="bankAccount" name="bankAccount" placeholder="Enter your name" >
+                                      </div>
+                                      <div class="form-group">
+                                        <label for="fullname">Address</label>
+                                          <textarea class="form-control" type="text" rows="4" cols="50" name="address"  placeholder="Enter your name" > </textarea>
+                                      </div>
+
+                                    <div class="form-group">
+                                        <label for="emailaddress">Email address</label>
+                                        <input class="form-control" type="email" id="emailaddress" name="emailAddress" placeholder="Enter your email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input class="form-control" type="password"  id="password" name="password" placeholder="Enter your password">
+                                    </div>
+
+                                    <div class="form-group mb-0 text-center">
+                                        <button class="btn btn-success btn-block" id="submit"  type="submit"> Sign Up </button>
+                                    </div>
+
+                                </form>
+
+                                <div class="text-center">
+                                    <h5 class="mt-3 text-muted">Sign up using</h5>
+                                    <ul class="social-list list-inline mt-3 mb-0">
+                                        <li class="list-inline-item">
+                                            <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="mdi mdi-google"></i></a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="mdi mdi-twitter"></i></a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github-circle"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div> <!-- end card-body -->
+                        </div>
+                        <!-- end card -->
+
+                        <div class="row mt-3">
+                            <div class="col-12 text-center">
+                                <p class="text-white-50">Already have account?  <a href="pages-login.html" class="text-white ml-1"><b>Sign In</b></a></p>
+                            </div> <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </div> <!-- end col -->
+                </div>
+                <!-- end row -->
+            </div>
+            <!-- end container -->
+        </div>
+        <!-- end page -->
+
+        <footer class="footer footer-alt">
+            2015 - 2019 &copy; UBold theme by <a href="#" class="text-white-50">Coderthemes</a>
+        </footer>
+{#   <script src="{% static 'js/vendor.min.js' %}"></script>#}
+{#        <!-- App js -->#}
+{#        <script src="{% static 'js/app.min.js' %}"></script>#}
+        <!-- Vendor js -->
+
+
+    </body>
+{# <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>#}
+  <script type="text/javascript">
+
+        $(document).ready(function (e) {
+         $("#frm").on('submit',(function(e) {
+             $("#state").show();
+             var url = "{% url 'registration:companyLogin' %}";
+           function callurl() {
+               document.location.href  =url;
+
+           }
+
+          e.preventDefault();
+          $.ajax({
+           url: '{% url 'registration:companyRegistration'%}',
+           type: "POST",
+           data:  new FormData(this),
+           contentType: false,
+           cache: false,
+           processData:false,
+           success:function(data){
+                $("#state").hide();
+                  {#alert("Successfully Registered")#}
+                  callurl();
+
+
+
+              }
+
+           });
+         }));
+        });
+
+
+        </script>
+<!-- Mirrored from coderthemes.com/ubold/layouts/dark-horizontal/pages-register.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 02 Jan 2020 17:32:03 GMT -->
+</html>

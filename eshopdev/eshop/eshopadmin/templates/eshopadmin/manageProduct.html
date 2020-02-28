@@ -1,0 +1,384 @@
+
+{% extends 'eshopadmin/baseadmin.html' %}]
+{% load static %}
+{% block content %}
+<style>
+#test{
+    margin: auto;
+    background: #0b0b0b;
+    width: 50%;
+}
+#test1{
+    margin: auto;
+    background: #0b0b0b;
+    width: 95%;
+
+
+}
+#addbtn{
+    margin-left: 78%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+}
+</style>
+    <button type="button" id="addbtn" class="btn btn-success waves-effect ql-color-green" data-toggle="modal" data-target="#myModal">Add Item Category</button>
+
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Content is Responsive</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <form id="frm"  method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                      <div class="modal-body p-4">
+                      <div class="row">
+                           <div class="col-md-12">
+                            <label for="example-select">Item Category</label>
+
+                            <select class="form-control" id="itemCategory_id" name="itemCategory_id" >
+                              <option value="...">select one</option>
+                                {% for foo in itemcat %}
+                                   <option value="{{ foo.id }}">{{ foo.categoryName }}</option>
+
+                                {% endfor %}
+                            </select>
+                           </div>
+                      </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Product  Name</label>
+                                <input type="text" class="form-control" id="product_name" name="product_name" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group no-margin">
+                                <label for="field-7" class="control-label">Product Description</label>
+                                <textarea class="form-control" id="product_detail" name="product_detail" placeholder="Write something about Item"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">product code</label>
+                                <input type="text" class="form-control" id="product_code" name="product_code" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+                  <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Product  Image</label>
+                                <input type="file" class="form-control" id="product_image" name="product_image" placeholder="Want to update image">
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Product  Quantity</label>
+                                <input type="text" class="form-control" id="product_total" name="product_total" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Product  Price</label>
+                                <input type="text" class="form-control" id="product_price" name="product_price" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+                       <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">product discount</label>
+                                <input type="text" class="form-control" id="product_discount" name="product_discount" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                    <button type="submit" id="submit"  class="btn btn-info waves-effect waves-light">Save changes</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div><!-- /.modal -->
+
+     <div id="test1">
+     <div class="col-lg-12">
+         <div class="card-box">
+
+
+
+             <div class="table-responsive">
+                 <table class="table table-dark mb-0">
+                     <thead>
+                     <tr>
+                         <th>Product Id</th>
+                         <th>Product Category</th>
+                         <th>Product Name</th>
+                         <th>Product Code</th>
+                         <th>Product Description</th>
+
+                         <th>Product image</th>
+                         <th>Product Quantity </th>
+                         <th>Product price</th>
+                         <th>Product Discount</th>
+                         <th>Action</th>
+                         <th>  </th>
+                     </tr>
+                     </thead>
+                     <tbody>
+                     {% for product in products %}
+
+
+
+
+                     <tr>
+
+                         <td>{{ product.id }}</td>
+                         <td>{{ product.itemCategory_id.categoryName }}</td>
+                         <td>{{ product.product_name }}</td>
+                         <td>{{ product.product_code }}</td>
+                         <td>{{ product.product_detail }}
+
+                         <td><img  src="{{ product.product_image.url }}" width="80px"  height="60px"></td>
+
+                         <td>{{ product.product_total }} </td>
+                         <td>{{ product.product_price }}</td>
+                         <td>{{ product.product_discount }}</td>
+
+
+
+                         <td><button style="color: whitesmoke" class="btn btn-success edit_button" data-toggle="modal" data-target="#myModal1"
+                                     data-id="{{ product.id }}" data-name="{{product.product_name }}" data-category_name="{{product.itemCategory_id.categoryName }}"
+                                      data-category_id="{{  product.itemCategory_id.id}}"
+                                     data-product_code="{{  product.product_code }}"  data-product_detail="{{product.product_detail }}"
+                                     data-product_image="{{  product.product_image.url }}" data-product_total="{{  product.product_total }}"
+                                     data-price="{{ product.product_price }}" data-discount="{{product.product_discount  }}"
+
+
+
+                                     type="button">Edit</button>
+                             <button onclick="return ConfirmDelete(); " class="btn btn-danger waves-effect"> <a  style="color:whitesmoke" href="{% url 'eshopadmin:productDelete' id=product.id %}" >Delete</a> </button>
+                         </td>
+
+
+                     </tr>
+                        {% endfor %}
+
+
+
+                     </tbody>
+                 </table>
+             </div>
+         </div> <!-- end card-box -->
+     </div>
+    </div>
+
+
+
+
+ <div id="myModal1" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Modal Content is Responsive</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                </div>
+                <form id="frm1"  method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                      <div class="modal-body p-4">
+                      <div class="row">
+                           <div class="col-md-12">
+                            <label for="example-select">Item Category</label>
+                             <input type="hidden" class="form-control " id="id1" name="id"  placeholder="Pen...">
+
+                            <select class="form-control" name="itemCategory_id" id="itemCategory_id1" >
+
+                                {% for foo in itemcat %}
+                                   <option  value="{{ foo.id }}">{{ foo.categoryName }}</option>
+
+                                {% endfor %}
+                            </select>
+                           </div>
+                      </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Product  Name</label>
+                                <input type="text" class="form-control" id="product_name1" name="product_name" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group no-margin">
+                                <label for="field-7" class="control-label">Product Description</label>
+                                <textarea class="form-control" id="product_detail1" name="product_detail" placeholder="Write something about Item"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">product code</label>
+                                <input type="text" class="form-control" id="product_code1" name="product_code" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+                  <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Product  Image</label>
+                                <label for="field-1" class="control-label"><img  id="product_image1" src="" height="60px" width="70px"></label>
+                                <input type="file" class="form-control"  id="image1"   name="product_image" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+                      <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Product  Quantity</label>
+                                <input type="text" class="form-control" id="product_total1" name="product_total" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">Product  Price</label>
+                                <input type="text" class="form-control" id="product_price1" name="product_price" placeholder="Pen...">
+
+                            </div>
+                        </div>
+                    </div>
+                       <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="field-1" class="control-label">product discount</label>
+                                <input type="text" class="form-control" id="product_discount1" name="product_discount" placeholder="Pen...">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>
+                    <button type="submit" id="submit"  class="btn btn-info waves-effect waves-light">Save changes</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+ <script type="text/javascript">
+         $(document).ready(function (e) {
+             $("#frm").on('submit',(function(e) {
+               {#var itemCategoryid1 = $('#itemCategoryid1').val()#}
+               {#console.log(itemCategoryid1);#}
+               e.preventDefault();
+               $.ajax({
+                   url: '{% url 'eshopadmin:productManage'%}',
+                   type: "POST",
+                   data:  new FormData(this),
+                   contentType: false,
+                   cache: false,
+                   processData:false,
+                   success:function(data){
+                           alert("saved");
+                           $('#myModal').modal('hide')
+
+                  }
+
+           });
+         }));
+
+             $(document).on( "click", '.edit_button',function(e) {
+                var id = $(this).data('id');
+                var product_name = $(this).data('name');
+                var categoryId = $(this).attr('data-category_id');
+                var category_name = $(this).attr('data-category_name');
+
+                var product_code = $(this).data('product_code');
+                var product_image = $(this).data('product_image');
+                var product_detail = $(this).data('product_detail');
+                var product_total = $(this).data('product_total');
+                var price = $(this).data('price');
+                var discount = $(this).data('discount');
+
+
+
+                $("#id1").val(id);
+                $("#product_detail1").val(product_detail);
+                $("#product_discount1").val(discount);
+                $("#product_code1").val(product_code);
+                $("#product_name1").val(product_name);
+
+                $("#product_total1").val(product_total);
+                $("#product_price1").val(price);
+                $('#itemCategory_id1').val(categoryId);
+                $('#product_image1').attr('src', product_image);
+
+                console.log(categoryId)
+
+
+              });
+
+              $("#frm1").on('submit',(function(e) {
+               {#var itemCategoryid1 = $('#itemCategoryid1').val()#}
+               {#console.log(itemCategoryid1);#}
+               e.preventDefault();
+               $.ajax({
+                   url: '{% url 'eshopadmin:productEdit'%}',
+                   type: "POST",
+                   data:  new FormData(this),
+                   contentType: false,
+                   cache: false,
+                   processData:false,
+                   success:function(data){
+                           alert("Successfully updated");
+                           $("#test1").load("#test1");
+                           $('#myModal1').modal('hide') ;
+
+
+                  }
+
+           });
+         }));
+
+
+
+        });
+
+
+ </script>
+
+{%  endblock %}

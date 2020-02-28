@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14a153b2-3971-4fbb-9c1a-0234c81e8d46" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+  </component>
+  <component name="ProjectId" id="1Vmwhw7t9rJaP7RShCT9tWAzbRv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="ChangesTree.GroupingKeys" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/css" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\eshop\eshopdev\eshop\static\css" />
+      <recent name="I:\eshop\eshopdev\eshop\eshopview\templates\eshopview" />
+      <recent name="I:\eshop\eshopdev\eshop\eshopadmin\templates\eshopadmin" />
+      <recent name="I:\eshop\eshopdev\eshop\media" />
+      <recent name="I:\eshop\eshopdev\eshop" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\eshop\eshopdev\eshop\static\css" />
+      <recent name="I:\eshop\eshopdev\eshop\eshopadmin\templates" />
+      <recent name="I:\eshop\eshopdev\eshop\static\images" />
+      <recent name="I:\eshop\eshopdev\eshop" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.views">
+    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="eshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/registration" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/registration/views.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="eshop" type="Python.DjangoServer" factoryName="Django server">
+      <module name="eshop" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="eshop.settings" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.views" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14a153b2-3971-4fbb-9c1a-0234c81e8d46" name="Default Changelist" comment="" />
+      <created>1577871701272</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577871701272</updated>
+      <workItem from="1577871706613" duration="3290000" />
+      <workItem from="1577896541058" duration="748000" />
+      <workItem from="1577898927526" duration="1402000" />
+      <workItem from="1578039390714" duration="3920000" />
+      <workItem from="1578043540182" duration="19523000" />
+      <workItem from="1578153556597" duration="1897000" />
+      <workItem from="1578161694848" duration="11063000" />
+      <workItem from="1578239751797" duration="10631000" />
+      <workItem from="1578250567776" duration="4434000" />
+      <workItem from="1578319895409" duration="2848000" />
+      <workItem from="1578409753756" duration="7773000" />
+      <workItem from="1578508946285" duration="629000" />
+      <workItem from="1578645796314" duration="24801000" />
+      <workItem from="1578685164373" duration="1630000" />
+      <workItem from="1578755840570" duration="7351000" />
+      <workItem from="1578929102533" duration="14475000" />
+      <workItem from="1579016205191" duration="1406000" />
+      <workItem from="1579023050434" duration="7995000" />
+      <workItem from="1579102120222" duration="2647000" />
+      <workItem from="1579249312943" duration="9888000" />
+      <workItem from="1579363136583" duration="5379000" />
+      <workItem from="1579540539943" duration="1118000" />
+      <workItem from="1579622614237" duration="14744000" />
+      <workItem from="1579706709272" duration="3604000" />
+      <workItem from="1579848721025" duration="805000" />
+      <workItem from="1579888172551" duration="10372000" />
+      <workItem from="1580059685516" duration="1345000" />
+      <workItem from="1580408269209" duration="2543000" />
+      <workItem from="1580454625048" duration="7682000" />
+      <workItem from="1580463914344" duration="20459000" />
+      <workItem from="1580547446680" duration="9547000" />
+      <workItem from="1580833722579" duration="1253000" />
+      <workItem from="1580927788447" duration="1165000" />
+      <workItem from="1581056952826" duration="613000" />
+      <workItem from="1581401337033" duration="8733000" />
+      <workItem from="1581440955092" duration="6283000" />
+      <workItem from="1581667163378" duration="32632000" />
+      <workItem from="1582091843766" duration="4977000" />
+      <workItem from="1582116514262" duration="3789000" />
+      <workItem from="1582131974844" duration="9364000" />
+      <workItem from="1582218129919" duration="12503000" />
+      <workItem from="1582273259062" duration="11102000" />
+      <workItem from="1582479643866" duration="4074000" />
+      <workItem from="1582914352230" duration="813000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/eshop$views.coverage" NAME="views Coverage Results" MODIFIED="1578668394250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/registration" />
+  </component>
+</project>

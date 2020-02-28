@@ -1,0 +1,36 @@
+{% extends 'eshopview/index.html' %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+<section class="container content-section">
+                <form id="frm1" action="" method="post">
+
+            <h2 class="section-header">CART</h2>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+                <div class="cart-row">
+                <span class="cart-item cart-header cart-column"></span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+                </div>
+            </div>
+
+
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">0</span>
+            </div>
+
+
+{#                <div class="modal-footer">#}
+{#                    <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Close</button>#}
+{#                    <button type="submit"    class="btn btn-info waves-effect waves-light">Save changes</button>#}
+{#                </div>#}
+                </form>
+                </section>
+{% endblock %}
